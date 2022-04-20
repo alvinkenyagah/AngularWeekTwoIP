@@ -4,7 +4,7 @@
 #### By **Alvin Kenyagah**
 ## Description
  I will be creating Web application Github Search where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories.
-  The live link to the landing page: 
+  The live link to the landing page: https://alvinkenyagah.github.io/AngularWeekTwoIP/
 ## Setup/Installation Requirements
 * An internet connection.
 * Browser.
