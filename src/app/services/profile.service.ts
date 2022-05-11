@@ -17,7 +17,7 @@ export class ProfileService {
   constructor(private http: HttpClient) {}
   //for github user
   getUserData(){
-    return this.http.get<any[]>(`${this.apiUrl}${this.userName}??access_token=+${this.apiKey}`).toPromise()
+    return this.http.get<any[]>(`${this.apiUrl}${this.userName}??access_token=+${atob(this.apiKey)}`).toPromise()
   }
   getUserName(userName:string){
     this.userName = userName
