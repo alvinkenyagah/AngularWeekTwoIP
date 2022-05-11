@@ -12,19 +12,18 @@ export class ProfileService {
   // [x: string]: any;
   private userName!:string;
   private repoName!:string;
-  private apiUrl = environment.apiUrl;
-  private apiKey = environment.apiKey;
+  
   constructor(private http: HttpClient) {}
   //for github user
   getUserData(){
-    return this.http.get<any[]>(`${this.apiUrl}${this.userName}??access_token=+${atob(this.apiKey)}`).toPromise()
+    return this.http.get<any[]>(`${environment.apiUrl}${this.userName}??access_token=+${atob(environment.apiKey)}`).toPromise()
   }
   getUserName(userName:string){
     this.userName = userName
   }
   //for user repositories
   getUserRepos(){
-    return this.http.get<any[]>(`${this.apiUrl}${this.userName}/repos??access_token=+${this.apiKey}`).toPromise();
+    return this.http.get<any[]>(`${environment.apiUrl}${this.userName}/repos??access_token=+${environment.apiKey}`).toPromise();
   }
   getRepos(repositories:string){
     return this.repoName = repositories
